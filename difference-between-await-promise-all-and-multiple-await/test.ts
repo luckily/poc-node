@@ -87,6 +87,8 @@ const scenarioComplex = async() => {
     const queue = [db1, db2, db3, api1, api2, api3, api4, api5];
     const rs: string[] = [];
     
+    // why should not use the foreach
+    // @see https://stackoverflow.com/a/37576787
     for(const task of queue) {
       rs.push(await task.getResult());
     }
