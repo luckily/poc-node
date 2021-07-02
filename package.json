@@ -1,0 +1,41 @@
+{
+  "name": "video-removal-tagging-procedure",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "rm -rf ./dist && tsc",
+    "dev": "ts-node ./src/index",
+    "start": "node dist/index",
+    "test": "NODE_ENV=development jest ${PWD}/test --coverage --detectOpenHandles"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/CHOCOLABS/video-removal-tagging-procedure.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/CHOCOLABS/video-removal-tagging-procedure#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/bluebird": "^3.5.35",
+    "@types/debug": "^4.1.5",
+    "@types/jest": "^26.0.23",
+    "@types/node": "^15.12.5",
+    "@types/yargs": "^15.0.13",
+    "jest": "^27.0.6",
+    "ts-jest": "^27.0.3",
+    "ts-node": "^10.0.0",
+    "tslint": "^6.1.3",
+    "typescript": "^4.3.5"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "collectCoverage": false,
+    "coverageReporters": [
+      "json",
+      "html"
+    ]
+  }
+}
